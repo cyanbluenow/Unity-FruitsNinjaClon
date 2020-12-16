@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3040713861672824538}
   - component: {fileID: 2526760284218096421}
   - component: {fileID: 7576720664446481165}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Food_Organic_Apple_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
