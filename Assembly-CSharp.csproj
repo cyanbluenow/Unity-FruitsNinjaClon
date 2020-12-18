@@ -56,9 +56,11 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Course Library/_Source_Files/Scripts/DestroyAfterDelay.cs" />
-    <Compile Include="Assets/Scripts/Target.cs" />
     <Compile Include="Assets/Scripts/GameManager.cs" />
+    <Compile Include="Assets/Scripts/Target.cs" />
+    <Compile Include="Assets/Course Library/_Source_Files/Scripts/DestroyAfterDelay.cs" />
+    <Compile Include="Assets/Scripts/DificultyBtn.cs" />
+    <Compile Include="Assets/Scripts/PointerFollow.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

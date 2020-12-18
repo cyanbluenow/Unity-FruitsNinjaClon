@@ -44,11 +44,20 @@ public class Target : MonoBehaviour
         return new Vector3(Random.Range(-xRange, xRange), ySpawnPos);
     }
 
-    private void OnMouseDown()
+    private void OnMouseOver()
     {
-        Destroy(gameObject);
-        Instantiate(explosionParticles, transform.position, explosionParticles.transform.rotation);
-        gameManager.UpdateScore(pointValue);
+        if (gameManager.currentGameState == GameManager.GameStates.inGame)
+        {
+            Debug.Log(gameObject.tag);
+            if (gameObject.tag == "Bad")
+            {
+                gameManager.UpdateLife(1);
+            }
+            Destroy(gameObject);
+            Instantiate(explosionParticles, transform.position, explosionParticles.transform.rotation);
+            gameManager.UpdateScore(pointValue);
+
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -56,9 +65,10 @@ public class Target : MonoBehaviour
         if(other.CompareTag("KillZone"))
         {
             Destroy(gameObject);
-            if (pointValue > 0)
+            if (gameObject.CompareTag("Good"))
             {
-                gameManager.UpdateScore(-10);
+                //gameManager.UpdateScore(-10);
+                gameManager.GameOver();
             }
         }
     }
